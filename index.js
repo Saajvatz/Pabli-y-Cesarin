@@ -1,7 +1,10 @@
-import { header } from "./componentes/header/tarea/header.js"
+import { header } from "./componentes/header/header.js";
+import { tarea } from "./componentes/tarea/tarea.js";
+import { formulario } from "./componentes/formulario/for.js";
 
-let DOM = document.getElementById("root")
 
-let html = document.createElement('div');
+let DOM = document.querySelector("#root")
 
-html.appendChild(header);
+DOM.appendChild(header());
+DOM.appendChild(tarea());
+DOM.appendChild(formulario());
