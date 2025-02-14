@@ -1,4 +1,4 @@
-import { cuadrosData } from "./data.js";
+import {cuadrosData } from "./data.js";
 
 function contenedor() { 
     let contenedor = document.createElement("div");

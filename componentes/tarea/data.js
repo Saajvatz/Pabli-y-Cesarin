@@ -13,4 +13,4 @@ const cuadrosData = [
     { id: 12, label: "Cuadro 12" }
 ];
 
-export  {cuadrosData};
+export {cuadrosData };
