@@ -1,0 +1,20 @@
+.header {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #ffffff; 
+    padding: 0 1rem; 
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header img {
+    width: 2.5rem; 
+    height: auto; 
+    border-radius: 50%; 
+    transition: transform 0.3s ease; 
+}
+
+.header img:hover {
+    transform: scale(1.1); 
+}

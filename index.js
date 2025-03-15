@@ -1,15 +1,27 @@
-import { header } from "./componentes/header/header.js";
-import { contenedor } from "./componentes/tarea/tarea.js";
-import { formulario } from "./componentes/formulario/for.js";
+import { crearHeader } from "./componentes/header/header.js";
+import { crearFormularioAgregarTarea, renderizarFormularioTareas } from "./componentes/formulario/for.js";
+import { crearFormulario } from "./componentes/login/login.js"; // Asegúrate de importar correctamente
 
-
-let DOM = document.querySelector("#root")
-
-function cargarDOM(){
-  
-DOM.appendChild(header());
-DOM.appendChild(contenedor());
-DOM.appendChild(formulario());
-  
+// Función para cargar el contenido principal
+async function cargarContenidoPrincipal() {
+    let DOM = document.getElementById("root");
+    DOM.innerHTML = ""; // Limpiar contenido actual
+    console.log('Cargando header...');
+    DOM.appendChild(crearHeader());
+    console.log('Cargando formulario...');
+    const formularioElement = await formulario();
+    DOM.appendChild(formularioElement); // Asegurarte de que se espera correctamente el formulario
+    console.log('Cargando formulario de tarea...');
+    DOM.appendChild(crearFormulario());
 }
+
+// Función que maneja la carga del formulario de login
+function cargarDOM() {
+    let DOM = document.getElementById("root");
+    console.log('Cargando formulario de login...');
+    const formularioLogin = crearFormulario(cargarContenidoPrincipal); // Pasar la función como parámetro
+    DOM.appendChild(formularioLogin);
+}
+
+// Ejecutar la carga inicial
 cargarDOM();
