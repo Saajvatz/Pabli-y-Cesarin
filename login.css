@@ -1,0 +1,109 @@
+/* Reset de estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo con gradiente para mejor apariencia */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal del login */
+.login-container {
+    width: 100%;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los grupos de inputs */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007BFF;
+    background-color: #fff;
+}
+
+/* Botón de envío */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="button"] {
+    background-color: #28a745;
+    margin-top: 10px;
+}
+
+button[type="button"]:hover {
+    background-color: #218838;
+}
+
+/* Estilo para mensajes de error */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Diseño adaptable para dispositivos móviles */
+@media (max-width: 400px) {
+    .login-container {
+        padding: 15px;
+    }
+    .input-group input {
+        font-size: 14px;
+        padding: 10px;
+    }
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
